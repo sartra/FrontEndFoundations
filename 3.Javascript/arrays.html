@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>buttons and input</title>
+</head>
+<body>
+
+  <input type="text" id="textInput">
+
+  <button id="textChanger">Change the Text!</button>
+
+  <p id="text">original text</p>
+
+  <script type="text/javascript">
+   
+      var myArray = new Array();
+
+      myArray[0] = "tomato";
+
+      myArray[1] = "chocolate";
+
+      var tweets = ["Hello", "Good Day", "Good Night"];
+
+      // PUSH 
+      tweets.push("Back to work!");
+
+      console.log(myArray.length);
+      console.log(tweets); 
+
+      // POP
+      // tweets.pop("Back to work!");
+
+      // SPLICE
+      tweets.splice(2, 2); // first number = index, second number = number of elements to delete
+      console.log(tweets); 
+
+      // SPLICE TO ADD IN ITEMS
+      tweets.splice(1,0, "Yummy Breakfast!")
+
+      console.log(tweets); 
+
+      // alert(tweets[2]);
+
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>buttons and input</title>
+</head>
+<body>
+
+  <p><input type="text" id="magicWord"></p>
+
+  <p><button id="checkMagicWord">Enter</button></p>
+
+  <p id="displayMagicWord"></p>
+
+  <script type="text/javascript">
+
+    document.getElementById("checkMagicWord").onclick = function(){
+
+      var magicWordEntered = document.getElementById("magicWord").value;
+      console.log(magicWordEntered);
+
+      document.getElementById("displayMagicWord").innerHTML = magicWordEntered;
+
+      var magicWord = "abracadabra";
+      var answer = magicWord.toUpperCase();
+
+      if (magicWordEntered == magicWord){
+        document.getElementById("displayMagicWord").innerHTML = answer += " You got it! That is the magic word!!!"
+      } else {
+        document.getElementById("displayMagicWord").innerHTML = "sorry, that is not the magic word.";     
+      }
+    }
+
+  </script>
+
+
+</body>
+</html>

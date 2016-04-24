@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+ <head>
+ <title>Learning CSS</title>
+
+ <meta charset="utf-8" />
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- FONTS -->
+<link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
+
+ <style type="text/css">
+
+p {
+  color: orange;
+  font-family: 'Julius Sans One', arial, helvetica, garamond; 
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: white;
+  font-family: 'Yanone Kaffeesatz', sans-serif; 
+}
+
+ .large {
+ font-size:200%;
+ }
+
+ #green {
+ color:green;
+ }
+
+ .underline {
+ text-decoration:underline;
+ }
+
+ .bold {
+ font-weight:bold;
+ }
+
+ .purplebox {
+ background-color:#B404AE;
+ width:200px;
+ height:200px;
+ z-index:3;
+/* position:static; static is default position*/
+position: static; /*doesnt move on the page*/
+margin: 50px 50px 0 50px;
+padding:10px 100px; 
+/*two numbers are<top and bottom> & <left and right padding>*/
+
+ }
+
+ .greenbox {
+ background-color:#295715;
+ width:300px;
+ height:500px;
+ z-index:2;
+ margin: 0 auto;
+padding:10px;
+ }
+
+ .bluebox {
+  background-color: #A9E2F3;
+  width: 500px;
+  height: 100px;
+  z-index:2;
+  position: relative;
+  top: -50px;
+ }
+
+
+
+ </style>
+
+ </head>
+
+ <body>
+
+ <div class="purplebox">
+
+ <p class="large">This is some text.</p>
+ <p> more text in the dame div, but this < p > tag has no class applied so it is not large, but regular p tag</p>
+
+ </div>
+
+ <div class="greenbox">
+<h1>This is h1 tag</h1>
+ <p id="green" class="large">This is some more text.</p>
+
+ </div>
+
+
+
+     <div class="bluebox">
+
+ <p id="green" class="large">This is some more text.</p>
+
+ </div>
+
+ <p>The third <span class="underline large bold">word</span> in this
+paragraph is underlined.</p>
+
+ </body>
+</html>

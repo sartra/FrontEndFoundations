@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+ <head>
+ <title>Learning CSS</title>
+
+ <meta charset="utf-8" />
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- FONTS -->
+<link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
+
+ <style type="text/css">
+
+ .large {
+ font-size:200%;
+ }
+
+ #orange{
+ color:#F5D0A9;
+ }
+ #blue {
+  color:#0489B1;
+ }
+
+ .underline {
+ text-decoration:underline;
+ }
+
+ .bold {
+ font-weight:bold;
+ }
+
+ .bluebox {
+ background-color:#CEF6F5;
+ width:200px;
+ height:200px;
+ float: left;
+ }
+
+ .redbox {
+ background-color:red;
+ width:300px;
+ height:100px;
+ float: right;
+ }
+
+.floatleft {
+  float: left;
+}
+
+.clear {
+  clear: both;
+}
+
+ </style>
+
+ </head>
+
+ <body>
+
+ <div class="bluebox">
+
+ <p class="large" id="blue">This is some text.</p>
+
+ </div>
+
+ <div class="redbox">
+ 
+ <p id="orange" class="large">This is some more text.</p>
+
+ </div>
+
+<div class="clear"> </div><!-- empty div to clear floats -->
+ <p class="floatleft">The third <span class="underline large bold">word</span> in this
+paragraph is underlined.</p>
+
+
+ </body>
+</html>

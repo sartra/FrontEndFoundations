@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+
+  <style type="text/css">
+
+/*.t {
+    display:table;
+    width:100%;
+    height: auto;
+    border-spacing:20px;
+}*/
+
+    .circles {
+      height: 20%;
+      width: 20%;
+      border-radius: 50%;
+      color: white;
+      text-align: center;
+      float: left;
+      margin: 20px;
+    }
+    
+    #blue-circle{
+      background-color: blue;
+    }
+
+    #red-circle{
+      background-color: red;
+    }
+
+    #yellow-circle{
+      background-color: Yellow;
+    }
+
+    .centerText{
+        margin: 45% auto;
+    }
+
+
+  </style>
+
+</head>
+<body>
+
+
+    <div class="circles" id="blue-circle">
+      <div class="centerText">1</div>
+    </div>
+
+    <div class="circles" id="red-circle">
+            <div class="centerText">2</div>
+
+    </div>
+
+    <div class="circles" id="yellow-circle">
+            <div class="centerText">3</div>
+
+    </div>
+
+
+
+
+    <script type="text/javascript">
+
+        // document.getElementsByClassName("circles").onclick = function(){
+        //   this.style.background-color = "red"
+        // }
+
+       
+
+        document.getElementById("blue-circle").onclick = function(){
+          this.style.backgroundColor = "grey";
+          // this.style.display = "none";
+        }
+
+        document.getElementById("yellow-circle").onclick = function(){
+          this.style.backgroundColor = "grey";
+          // this.style.display = "none";
+        }
+
+        document.getElementById("red-circle").onclick = function(){
+          this.style.backgroundColor = "grey";
+          // this.style.display = "none";
+        }
+
+
+
+
+    </script>
+
+</body>
+</html>

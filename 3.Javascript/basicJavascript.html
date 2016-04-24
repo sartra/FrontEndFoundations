@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+    <p id="text"> Hello World! </p>
+
+    <button id="button1">Change Text</button>
+
+    <p id="appendText">Appending a word to this...</p>
+
+    <button id="appender">Appender</button>
+
+    <p id="invisiblia"></p>
+
+    <button id="Waa-Laa">Press Me!</button>
+
+    <p id="moreText">Some Text...</p>
+
+    <button id ="styleText">Style Text</button>
+
+
+
+    <script type="text/javascript">
+
+
+      
+    // alert("page is loaded");
+
+      // document.getElementById("text").innerHTML = "Goodnight Moon";
+
+
+      document.getElementById("button1").onclick = function(){
+              // alert("button clicked");
+              document.getElementById("text").innerHTML = "Goodnight Moon";
+      };
+
+      document.getElementById("appender").onclick = function(){
+        document.getElementById("appendText").innerHTML += "Awesome!"; 
+      };
+
+      // var newText;
+
+      document.getElementById("Waa-Laa").onclick = function(){
+        document.getElementById("invisiblia").innerHTML = "<h1>Waa-Laa</h1>";
+      };
+
+      document.getElementById("styleText").onclick = function(){
+        document.getElementById("moreText").style.color = "red";
+        document.getElementById("moreText").style.fontSize = "28pt";
+        document.getElementById("moreText").style.fontFamily = "Arial";
+        // document.getElementById("moreText").style.display = "none";
+      }
+
+
+
+
+    </script>
+
+</body>
+</html>

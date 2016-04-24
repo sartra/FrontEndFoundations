@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>My BBC</title>
+
+<!-- duplicate of this site:
+  http://web.archive.org/web/20140402131524/http://www.bbc.co.uk/news/uk/ -->
+
+  <style type="text/css">
+
+    body {
+     font-family: Arial, Helmet, Freesans, sans-serif;
+     margin:0;
+     line-height:16px;
+   }
+
+   #container {
+
+   } 
+
+   #top-bar {
+     width:100%;
+     height: 46px;
+     background-color:#7A0000;    
+     margin:0;
+     color: white;
+/*     background-color: rgba(183,0,0,.9);
+*/
+}
+
+.fixed-width {
+ width:1100px;
+ margin: 0 auto;
+}
+
+#bbc-logo {
+ padding-right:5px;
+ float:left;    
+ border-right:1px solid #990000;
+ height:46px;
+}
+#bbc-logo img {
+ margin:10px 10px 0 0px;
+ height: 30px;
+}
+
+/*   #sign-in-image {
+    float:left;
+    padding-left: 20px;
+    padding-top: 12px;
+  }*/
+
+/*  #sign-in-text {
+    font-weight: bold;
+    float:left;
+    height:41px;
+    width:200px;
+    padding-left:10px;
+  }*/
+
+  #signindiv{
+    font-weight:bold;
+    font-size: .9em;
+    float: left;
+    widows: 200px;
+    border-right: 1px solid #990000;
+    height: 44px;
+    padding: 2px 80px 0 20px;
+
+  }
+
+
+  #signindiv img {
+    position: relative;
+    top: 10px;
+  }
+
+  #topmenudiv {
+    float: left;
+    margin: 0;
+  }
+
+  #topmenudiv ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  #topmenudiv li {
+    float: left;
+    list-style: none;
+    font-weight: bold;
+    font-size: .9em;
+    padding: 13px 20px 16px 20px;
+    border-right: 1px solid #990000;
+    height: 100%;
+  }
+
+  #searchdiv {
+    float: left;
+    padding: 7px 0 0 10px;
+  }
+
+  #searchdiv input {
+    height: 26px;
+    border: none;
+    padding: 3px 0 3px 5px;
+    font-size: 1em;
+    background-image: url("img/magnify.png");
+    background-size: 20%;
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+
+  .break {
+    clear: both; /*this div just clears the float between two divs - it is empty */
+  }
+
+  #newsbar {
+   width:100%;
+   height: 103px;
+   background-color:#990000;
+   margin:0;
+   color: white;
+ }
+
+ #newsbar p {
+  margin: 0;
+  padding: 30px 20px 0 0;
+  float: left;
+}
+
+#newsheader{
+  font-size: 3em;
+}
+
+#uk {
+  font-size: .7em;
+  padding-left: 20px;
+}
+
+#rss {
+  float: right;
+  margin-top: 50px;
+}
+
+#rss img {
+  height: 14px;
+  margin-left: 5px;
+}
+
+#topicmenu {
+
+}
+
+#topicmenu ul {
+  background-color: #3E0C0D;
+  margin-top: 10px;
+  /*  padding: 5px;*/
+  height: 20px; 
+  padding: 5px 10px 0 10px;
+}
+
+#topicmenu li {
+  list-style: none;
+  font-size: .8em;
+  border-right: 1px solid #990000;
+  float: left;
+  padding: 0 8px 0 8px;
+
+}
+
+.selected {
+  background-color: #ededed;
+  color: #666666;
+  height: 22px;
+  position: relative;
+  top: -5px;
+  padding-top: 5px !important;
+}
+
+#content {
+ width:100%;
+ margin:0;
+ color: #535353;
+ font-size: .9em;
+}
+
+.date {
+  font-weight: bold;
+}
+
+h1 {
+  color: #1F4F82;
+  font-size: 2.5em;
+}
+
+.gallery_image {
+  float: left;
+}
+
+.newsitem {
+  float: left;
+  position: relative;
+  left: 15px;
+  top: -15px;
+  width: 320px;
+  font-size: 1.1em;
+}
+
+.newsitem a {
+  color: #1F4F82;
+  text-decoration: none;
+}
+
+.newsitem a:hover {
+  color: #1F4F82;
+  text-decoration: underline;
+}
+
+.newsitem a:active{
+  color: #ff5933;
+}
+
+.playhead {
+  height: 20px;
+}
+
+.newsitem p a{
+  line-height: 1.7em;
+}
+
+.video {
+  background-image: url("img/playhead.png");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding: 5px 0px 5px 30px;
+}
+
+.audio {
+  background-image: url("img/audio.png");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding: 5px 0px 5px 30px;
+}
+
+#watchlisten {
+  background-color: #EEEEEE;
+  float: right;
+  width:300px;
+  position: relative;
+  top: -80px;
+}
+
+h2 {
+ color: #666666;
+ margin: 10px 0 10px 10px;
+ font-size: 1.8em;
+}
+
+.boxes{
+  height:10px;
+  width: 10px;
+  background-color: grey; 
+  float: right;
+  position: relative;
+  top: -30px;
+  margin-right: 5px;
+}
+
+/*.boxes:nth-child(4n+1) {
+  margin-right: 20px;
+}*/
+
+.orangeboxes{
+  height:10px;
+  width: 10px;
+  background-color: orange; 
+  float: right;
+  position: relative;
+  top: -30px;
+  margin-right: 5px;
+}
+
+
+</style>
+
+</head>
+<body>
+
+  <div id="container">
+
+    <div id="top-bar">
+
+      <div class="fixed-width">
+
+        <div id="bbc-logo">
+          <img src="img/logo.png" >
+        </div> <!-- close logodiv -->
+
+        <div id = "signindiv">
+          <img src="img/signin.png">
+          Sign In
+        </div>
+
+        <div id="topmenudiv">
+          <ul>
+            <li>News</li>
+            <li>Sport</li>
+            <li>Weather</li>
+            <li>iPlayer</li>
+            <li>TV</li>
+            <li>Radio</li>
+            <li>More</li>
+          </ul>
+        </div>
+
+        <div id="searchdiv">
+          <input type="text" placeholder="Search"></input>
+        </div>
+      </div> <!-- close fixed width div -->
+    </div> <!-- close topbar tag -->
+
+
+    <div class="break"></div> <!-- break floats (clear: both) -->
+
+    <div id="newsbar">
+
+      <div class="fixed-width">
+        <p id="newsheader">NEWS<span id="uk">UK</span></p>
+
+        <div id="rss">RSS<img src="img/rss.png"></div>
+
+        <div class="break"></div>
+
+        <div id="topicmenu">
+          <ul>
+            <li>Home</li>
+            <li>World</li>
+            <li class="selected">UK</li>
+            <li>England</li>
+            <li>N.Ireland</li>
+            <li>Scotland</li>
+            <li>Wales</li>
+            <li>Business</li>
+            <li>Politics</li>
+            <li>Health</li>
+            <li>Education</li>
+            <li>Sci/Environment</li>
+            <li>Technology</li>
+            <li style="border-right: none;">Entertainment/ & Arts</li>
+          </ul>
+          
+
+        </div>
+
+      </div> <!-- close the fixed width div inside newsbar div -->
+
+    </div> <!-- close the newsbar div -->
+
+    <div class="break"></div>
+
+
+    <div id="content">
+
+      <div class="fixed-width">
+
+        <p><span class="date">February 2016</span> Last Updated at 06:04</p>
+
+        <h1>Pollution to spread across England</h1>
+
+        <img src="img/gallery1.jpg" class="gallery_image">
+
+        <div class="newsitem">
+
+          <p> Pollution hanging over Canary WharfDust on car
+            Previous image | Pause | Next image
+            4 / 4
+            Health warnings have been issued by the government as pollution spreading across England is forecast to hit high levels.</p>
+
+            <p><a class="video" href="">Why are pollution levels so high?</a><br>
+
+            <a class="video" href="">Saharan dust visible on cars</a><br>
+
+            <a class="video" href="">How Saharan dust reached the UK Watch What will pollution do to us?</a><br>
+
+            <a class="audio" href="">How Saharan dust reached the UK Watch What will pollution do to us?</a></p>
+
+          </div> <!-- // close newsitem div -->
+
+          <div id="watchlisten">
+            <h2>Watch/Listen</h2>
+            <div class="boxes" span style="margin-right: 10px;"></div>
+            <div class="boxes"></div>
+            <div class="boxes"></div>
+            <div class="orangeboxes"></div>
+          </div>
+
+        </div> <!-- close fixed width div -->
+
+      </div> <!-- close content div -->
+
+
+
+    </div> <!-- close container tag -->
+
+  </body>
+  </html>

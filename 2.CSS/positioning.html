@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+ <head>
+ <title>Learning CSS</title>
+
+ <meta charset="utf-8" />
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+ <script src="js/index.js"></script>
+
+ <style type="text/css">
+
+ .large {
+ font-size:200%;
+ }
+
+ #green {
+ color:green;
+ }
+
+ .underline {
+ text-decoration:underline;
+ }
+
+ .bold {
+ font-weight:bold;
+ }
+
+ .purplebox {
+ background-color:#B404AE;
+ width:200px;
+ height:200px;
+ z-index:3;
+/* position:static; static is default position*/
+position: fixed; /*doesnt move on the page*/
+ }
+
+ .greenbox {
+ background-color:#295715;
+ width:300px;
+ height:500px;
+ z-index:2;
+ position: relative;
+ left: 100px;
+ top: 0px;
+ }
+
+ .bluebox {
+  background-color: #A9E2F3;
+  width: 500px;
+  height: 100px;
+  z-index:2;
+  position: relative;
+  top: -50px;
+ }
+
+
+
+ </style>
+
+ </head>
+
+ <body>
+
+ <div class="purplebox">
+
+ <p class="large">This is some text.</p>
+
+ </div>
+
+ <div class="greenbox">
+
+ <p id="green" class="large">This is some more text.</p>
+
+ </div>
+
+
+
+     <div class="bluebox">
+
+ <p id="green" class="large">This is some more text.</p>
+
+ </div>
+
+ <p>The third <span class="underline large bold">word</span> in this
+paragraph is underlined.</p>
+
+ </body>
+</html>

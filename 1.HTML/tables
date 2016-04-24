@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<table>
+  <tr><th>Name</th><th>Occupation</th><th>Location</th></tr>
+  <tr><td>Sarah</td><td>Designer/Developer</td><td>New York City</td>
+  <tr><td>Paul</td><td>Hustler/Geezer</td><td>New York City</td></tr>
+</tr>
+
+
+
+
+</table>
+
+</body>
+</html>
