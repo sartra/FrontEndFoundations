@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        
+        <script type="text/javascript" src="../jquery-2.2.3.min.js"></script>   
+        <script type="text/javascript" src="js/script.js"></script>
+  <title>jQuery Selectors</title>
+        
+        <style type="text/css">
+            .container{
+              width: 600px;
+              margin: 0 auto;
+              padding: 20px;
+              background-color: #F7FF8A
+            }
+
+            button{
+              box-sizing: border-box;
+              display: block;
+              margin: 5px 0;  
+              color: white;
+              border-radius: 5px;
+              background-color: royalblue;
+              font-size: 20px;
+              text-decoration: none;
+              cursor: pointer;
+            }
+
+            button:hover{
+              background-color: blue;
+            }
+
+            form{
+              border: 2px dashed lightgray;
+              padding: 5px 10px;
+              margin-top: 10px;
+              background-color: #F4FFF6
+            }
+
+            .play-area{
+              box-sizing: border-box;
+              border: 2px solid black;
+              font-size: 30px;
+              padding:10px;
+              margin-top: 20px;
+              width: 100%;
+              height: 100px;  
+              background-color: white;  
+            }
+
+            .play-area.groovy{
+              background-color: palegreen;
+              height: 300px;
+            }
+
+            .play-area.boring{
+              background-color: teal;
+            }
+
+
+        </style>
+  
+</head>
+<body>
+
+      <div class="container">
+
+        <button class = "dimensions-button">Dimensions</button>
+        <button class = "html-button">The HTML</button>
+        <button class = "css-button" data-new-name="groovy">The CSS 1</button>
+        <button class = "css-button" data-new-name="boring">The CSS 2</button>   <!--  data-new-name is an attribute; separate words with '-' -->
+        <button class="link-button" data-url="http://mrra.co">button1</button>
+        <button class="link-button" data-url="http://sweeandmoo.com">button2</button>
+        <button class="link-button" data-url="http://uxfoundry.co.za">button3</button>
+
+        <a href="#" target="_blank">The missing link...</a>
+
+    <div class="play-area">
+        This is the play area
+     </div>
+
+     </div>
+
+
+
+
+</body>
+</html>
+
