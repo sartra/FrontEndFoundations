@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+
+        <script type="text/javascript" src="scripts/jquery-2.2.3.min.js"></script> <!-- local file  -->
+
+        <link rel="stylesheet" type="text/css" href="css/jquery.css">
+
+        <link rel="stylesheet" type="text/css" href="/cgi-bin/4.jQuery/css/jquery.css">
+
+        
+        
+
+
+  <title>jQuery</title>
+</head>
+
+<body>
+
+  <button id="reds">Bring Back Red Circles</button>
+
+  <div class="red-circle"></div>
+
+  <div class="green-square"></div>
+
+  <div class="green-square"></div>
+  
+  <div class="break"></div>
+
+  <p>original text</p>
+
+  <div class="break"></div>
+
+  <div id="circle"></div>
+
+  <iframe src="http://www.cnn.com"></iframe>
+
+  <div class="red-circle"></div>
+
+  <div class="break"></div>
+
+  <div id="green-circle"></div>
+
+  <div id="yellow-circle"></div>
+
+  <p id="text">Some text.</p>
+
+  <button id="toggle">toggle text</button>
+
+
+<script type="text/javascript">
+  
+  
+//make sure it is installed properly
+  if(typeof jQuery == 'undefined'){
+    console.log('jQuery is NOT installed');
+  } else {
+    console.log('jQuery is installed!');
+  }
+
+
+$('.red-circle').click(function(){
+  console.log('circle clicked');
+  $(this).css('display', 'none');
+  $('#reds').css('display', 'block');
+  $('#reds').click(function(){
+    $('#reds').css('display', 'none');
+    $('.red-circle').css('display', 'block');
+  })
+});
+
+
+$('.green-square').click(function(){
+  $('p').html('new text after clicking square');
+});
+
+$('#circle').hover(function(){
+  $('iframe').attr('src', 'https://www.ecowebhosting.co.uk');
+});
+
+$('.green-square').click(function(){
+  $('.green-square').css('width', '200px');
+  $('.green-square').css('background-color', '#E6FF56');
+});
+
+console.log($('body').css('width'));
+
+$("#green-circle").dblclick(function() {
+  $(this).fadeOut(4000, 'linear', function(){ //a callback function
+    console.log('fadeOut finished');
+  });
+});
+
+$("#yellow-circle").dblclick(function() {
+  $(this).hide();
+});
+
+
+
+$('#toggle').click(function(){
+  if($('#text').css('display')=='none'){
+      $('#text').fadeIn();
+  } else {
+      $('#text').fadeOut();
+  }
+});
+
+
+
+
+</script>
+  
+
+ 
+</body>
+</html>

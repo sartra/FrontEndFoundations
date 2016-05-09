@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery Accordian</title>
+        <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+        <script type="text/javascript" src="../jquery-2.2.3.min.js"></script>   
+        <script type="text/javascript" src="script.js"></script>
+        
+        <script type="text/javascript" src="http://files.parsetfss.com/921d6852-3587-4921-bcc6-bf563747e089/tfss-68b6cb20-56be-4894-b21e-99fd1db3adf8-script.js"></script>
+        
+
+  <style>
+        body, html{
+          padding: 0;
+          margin:0;
+          background-color: lightgrey;
+          font-family: sans-serif;
+        }
+
+        .container{
+          width: 600px;
+          margin: 0 auto;
+        }
+        
+        button{
+          box-sizing: border-box;
+          display: block;
+          margin: 5px 0;
+          padding: 10px;
+          color: white;
+          border-radius: 5px;
+          background-color: royalblue;
+          font-size: 20px;
+          text-decoration: none;
+          cursor: pointer;
+        }
+
+        .accordion{
+          list-style: none;  /*to remove defaults*/
+          margin: 0;
+          padding: 0;
+          border: #7A7A7A 1px solid;
+        }
+
+        .accordion li{
+          margin: 0;
+          padding: 0;
+          border-top: #999 1px solid;
+          background-color: white;
+        }
+
+        .accordion li:first-child{  /*remove border top from first cell*/
+          border-top: none;
+        }
+
+        .accordion li p{
+          margin: 0;
+        }
+
+        .content{
+          border-top: #999 1px solid;
+          padding: 10px;
+          background: #FFFBDA;
+          display: none;
+        }
+
+        .title{
+          padding: 10px;
+        }
+
+        .title span{
+          display: block;
+          float: right;
+        }
+
+
+  </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+      <h2>The Accordion</h2>
+
+        <ul class="accordion">
+          <li>
+            <div class="title">Title 1<span>+</span></div>
+            <div class="content">
+            <p>Content 1</p>
+            <p>Lorem ipsum Deserunt sunt proident reprehenderit sunt irure Ut in id minim.
+
+Dolor ex minim aliqua cupidatat aliquip laborum dolor.
+
+Officia reprehenderit ut eiusmod tempor amet mollit dolor nostrud.
+
+Velit proident culpa culpa cupidatat dolore culpa velit enim.
+
+Quis elit id ad sint aliquip laborum Excepteur commodo occaecat.
+
+Quis enim consequat reprehenderit eiusmod nisi commodo exercitation.
+
+Incididunt do magna Excepteur elit nulla occaecat enim reprehenderit.
+
+Esse voluptate dolor ad officia consectetur officia et.
+
+Proident reprehenderit id officia sunt ullamco dolore pariatur.
+
+Non est minim officia qui ea.
+
+Reprehenderit laborum aliqua consectetur non id non aute et Ut esse.
+
+Consequat pariatur in sint minim in occaecat sint culpa cillum.
+
+Esse quis Excepteur occaecat anim id.
+
+Occaecat aliqua do consectetur deserunt aliqua ullamco elit.
+
+Dolore aute esse veniam laboris cupidatat do ut aute consectetur.
+
+Quis consectetur enim ad Ut dolore culpa ad occaecat sed.
+
+Mollit occaecat esse Duis Duis ad.
+
+Eiusmod Duis voluptate consectetur Ut nostrud incididunt officia.
+
+Ea voluptate amet mollit sint cillum Excepteur qui sunt veniam proident.
+
+
+</p>
+</div>
+          </li>
+          <li>
+            <div class="title">Title 2<span>+</span></div>
+            <div class="content"><p>Content 2</p></div>
+          </li>
+          <li>
+            <div class="title">Title 3<span>+</span></div>
+            <div class="content"><p>Content 3</p></div>
+          </li>
+          <li>
+            <div class="title">Title 4<span>+</span></div>
+            <div class="content"><p>Content 4</p></div>
+          </li>
+        </ul>
+
+    </div>
+
+  
+
+
+</body>
+</html>

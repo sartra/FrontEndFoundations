@@ -1,0 +1,68 @@
+.red-circle {
+  background-color: #FF9021;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  border-radius: 50%;
+  display: block;
+  float: left;
+}
+
+.red-circle:hover{
+  background-color: #FF4503
+}
+
+#circle {
+  background-color: #B1FFFA;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  border-radius: 50%;
+  display: block;
+  float: left;
+}
+
+#circle:hover {
+  background-color: #73CFFF
+  }
+
+.green-square {
+  background-color: #a2f34b;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  display: block;
+  float: left;
+}
+
+.green-square:hover{
+  background-color: #4CCE19
+}
+
+#green-circle{
+  background-color: #B5FFA2;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  border-radius: 50%;
+  display: block;
+  float: left;
+}
+
+#yellow-circle{
+  background-color: #FFFA22;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  border-radius: 50%;
+  display: block;
+  float: left;
+}
+
+.break {
+    clear: both; /*this div just clears the float between two divs - it is empty */
+  }
+
+  #reds{
+    display:none;
+  }
