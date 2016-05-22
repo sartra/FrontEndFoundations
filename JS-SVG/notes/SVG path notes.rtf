@@ -1,0 +1,101 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww9940\viewh14640\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b\fs42 \cf0 PATHS 
+\b0\fs24 \
+\
+Illustrator to Web  \'97 need some kind of software to covert drawn paths into SVG for coordinate download to put into html\
+\
+EXPORT SVG (ILLUSTRATOR > SAVE AS)\
+\
+\
+
+\b\fs30 \ul POLYGON Vs PATH
+\fs24 \
+\
+
+\b0 \ulnone <polygon points = \'937,10 12,0 17,10\'94 />\
+\
+<path d=\'93M7,10 L7,10 L12,0 L17,0 Z></path>  \
+
+\fs20  // d is start point, L are in-between lines, and Z is end of path\
+\
+
+\fs24 \
+
+\b Cubic B\'e9zier Path:
+\b0 \
+You can use \'91C\'92 in your path to denote a cubic B\'e9zier curve\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 Quadratic B\'e9zier Path:
+\b0 \
+You can use \'91Q\'92 in your path to denote a quadratic B\'e9zier curve\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 Elliptical Arc Curve:
+\b0 \
+You can use a leading \'91A\'92 in your path to designate a cubic B\'e9zier curve\
+\
+\
+\
+
+\b\fs30 \ul STYLING PATHS
+\b0\fs24 \ulnone \
+\
+Paths can be styled or animated just like any other SVG element\
+\
+These attributes exist to style the path:\
+	\'95 stroke\
+	\'95 stroke-width\
+	\'95 stroke-linecap\
+	\'95 stroke-dasharray\
+	\'95 stroke-dashoffset\
+\
+can put in css, e.g.:\
+\
+	path \{\
+		fill: #030330;\
+		stroke: #000;\
+		stroke-width: 2px; \
+	\}\
+\
+\
+SYMBOLS\
+wrap around SVG to use in multiple places in an html document\
+\
+1st, make a symbol tag:\
+	\
+	<symbol id=\'93phone-icon\'94>\
+		<rect x=\'935\'94 y=\'935\'94 width=\'9370\'94 height=\'93100\'94 />	\
+		<circle r=\'933\'94 cy =\'93105\'94 cx=\'9340\'94 />\
+	</symbol>\
+\
+put a class on the SVG:\
+	<svg xmlns=http://www.w3.org/2000/svg\'94 class= \'93
+\b defined-icon
+\b0 \'94>\
+in CSS:\
+	.
+\b defined-icon
+\b0  \{\
+		display: none;\
+	\}\
+so that it doesn\'92t show up until we want it to.\
+\
+ The viewBox goes on the second SVG, placed where it should show up on page\
+\
+\
+\
+\
+\
+\
+\
+\
+}

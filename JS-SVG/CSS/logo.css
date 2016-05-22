@@ -1,0 +1,123 @@
+svg{
+  height: auto;
+  width: 20%;
+}
+
+circle{
+  fill: none;
+  stroke: #008b6f;
+  stroke-width: 7px;
+}
+
+line{
+  stroke: black;
+  stroke-width: 5px;
+}
+
+polygon{
+  fill: #008b6f;
+  stroke: black;
+  stroke-width: 2px;
+}
+
+text{
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 60px;
+  text-anchor: middle;
+/*  font-family: 'Montserrat';
+*/  font-weight: bold;
+  stroke: black;
+  stroke-width: 3px;
+  fill: #f6f7f3;
+}
+
+.triangle-group{
+  fill:#008b6f;
+  stroke: #000;
+  stroke-width: 2px;
+}
+
+
+
+
+#wrapper {
+  height: auto;
+  width: 90%;
+  margin: 0 auto;
+  background-color: #ffffe6;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(sansation_light.woff);
+}
+
+.element {
+  padding: 60px;
+  background-color: black;
+  transition: background-color 5s ease; 
+  /*other timing functions: ease, ease-in, ease-in-out, linear, cubic-bezier, step-start, step-end, steps();
+transition: <property><duration><timeing-function><delay>;
+  */
+  color: white;
+}
+
+.element:hover {
+  background-color: yellow;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.element2{
+  font-family: Arial;
+  text-align: center;
+  margin-top: 10px;
+  padding: 30px 0;
+  background-color: black;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.element2:hover{
+  background-color: grey;
+  color: black;
+  transition: all 0.2s ease-in-out;
+}
+
+button {
+  width: 100px;
+  margin: 10px 5px 10px 5px;
+  padding:20px 0  20px 0;
+  background: #ccc;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.75);
+}
+
+img  {transform : translate(120px , 40px) ;
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+    width: 50%;
+    height: auto;
+ }
+
+img:hover {
+  opacity: 0.5;
+  transform: rotate(-5deg) scale(1.5);
+
+}
+
+a  {  
+      width: 100%;
+      color : #c44743 ; 
+      padding: 10px 0 10px 0;
+      margin-top:120px;
+      display: block;
+      background-color: pink;
+      transition-property : background-color ; 
+      transition-duration : 1s ; 
+      transition-timing-function : ease ; 
+      transition-delay : 0s ; } 
+
+a:hover { color : #d56d68 ; 
+background-color: lightblue;}

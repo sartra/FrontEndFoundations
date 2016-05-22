@@ -1,0 +1,24 @@
+<svg height="600" 
+    width="600"
+    xmlns="http://www.w3.org/2000/svg"
+    version="1.1">
+  
+
+  <!-- TV -->
+  <rect height="80" width ="100" x="10" y="10" />
+  <rect height="50" width = "80" fill="white" x="20" y="20" />
+  <rect height="10" width ="40" x="40" y="100" />
+
+  <!-- PHONE -->
+  <rect height="100" width="70" fill="white" stroke="#ff2626" stroke-width="10" x="200" y="10" rx="5"  />
+  <circle cx="235" cy="110" r="3" fill="white"/>
+
+<!-- USE INVISIBLE ELLIPSES TO ROUND THE CORNER OF THE RECT - IF YOU SET rx="5" the ry is automatically 5 as well (the radius of the invisible ellipse) -->
+  <ellipse cx="300" cy="110" fill="blue" rx="10" ry="25"  />
+
+
+<!--   Put SVG code inline in the html file so can animate, etc. (as opposed to as an image tag)
+ -->
+
+
+</svg>

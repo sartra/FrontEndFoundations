@@ -1,0 +1,12 @@
+/* animate circle on phone
+ */
+circle {
+  animation: grow 2s infinite;
+  transform-origin: center;
+}
+
+@keyframes grow {
+  0% {transform: scale(1);}
+  50% {transform: scale(0.5);}
+  100% {transform: scale(1);}
+}
