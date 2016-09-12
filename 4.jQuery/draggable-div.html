@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Draggable jQuery UI</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script> -->
+
+  <script type="text/javascript" src="scripts/jquery-2.2.3.min.js"></script> <!-- local file  -->
+
+  <script src="scripts/jquery-ui/jquery-ui.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="css/jquery.css">
+
+    
+<link href="scripts/jquery-ui/jquery-ui.css" rel="stylesheet">
+
+
+
+  <style type="text/css">
+
+#draggable {
+    background: #D2FFAE;
+    color: orangered;
+    width:100px;
+    height:100px;
+    text-align: center;
+    border:5px solid rgba(38, 90, 114, 0.6);
+    border-radius: 20px;
+}
+
+#draggable2 {
+    background: #D2FFAE;
+    color: orangered;
+    width:100px;
+    height:100px;
+    text-align: center;
+    border:5px solid rgba(38, 90, 114, 0.6);
+    border-radius: 20px;
+}
+
+#drag-p{
+    padding-top:20px;
+    font-size:12px;
+}
+
+#wrapper{
+    margin:0 auto;
+    width: 900px;
+    height: 300px;
+    background-color: #FFECF9;
+}
+
+#resizable { width: 150px; height: 150px; padding: 0.5em; }
+#resizable h3 { text-align: center; margin: 0; }
+
+#also { width: 150px; height: 150px; padding: 0.5em; background-color: orangered }
+#also h3 { text-align: center; margin: 0; }
+
+
+
+</style>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+    
+
+<div id="draggable" class="ui-widget-content">
+  <p id="drag-p">Drag me horizontally</p>
+</div>
+
+<div id="draggable2" class="ui-widget-content">
+  <p id="drag-p">Vertical Resttraint</p>
+</div>
+
+
+</div> <!-- wrapper end -->
+
+<div id="resizable" class="ui-widget-content">
+  <h3 class="ui-widget-header">Resizable</h3>
+</div>
+
+<div id="also" class="ui-widget-content">
+  <h3 class="ui-widget-header">Resizable ALSO</h3>
+</div>
+
+<script type="text/javascript">
+
+$(function() {
+    $( "#draggable" ).draggable({ 
+        axis: "x",
+        containment: "parent"
+     });
+    $( "#draggable2" ).draggable({ 
+        axis: "y"
+     });
+  });
+
+$(function() {
+    $( "#resizable" ).resizable({
+        grid: 100,
+        alsoResize: "#also",
+        resize: function(){
+            if ($("#resizable").width() > 300){
+              alert('width is over 300px');  
+            }       
+        }
+    });
+    $( "#also" ).resizable();
+    $("#resizable").draggable();
+    $( "#also" ).draggable();
+  });
+     
+</script>
+
+
+</body>
+</html>

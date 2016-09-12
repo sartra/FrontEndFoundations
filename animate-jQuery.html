@@ -51,4 +51,36 @@ $('#circle').click(function(){
 
 </script>   
 </body>
+</html>ript>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+
+<script type="text/javascript">
+  
+$('#circle').click(function(){
+  $(this).animate({
+    width: '400px', 
+    height: '400px',
+    marginLeft: '100px',
+    marginTop: '100px',
+  }, 2000, function(){
+    $(this).css('background-color', 'orangered');
+  });
+
+});
+
+
+$('.fade-button').click(function(){
+  $('.fadeout-paragraph').fadeTo(2000, 0.1);
+});
+
+$('.fadeIn-button').click(function(){
+  $('.fadeIn-paragraph').fadeIn(1000);
+});
+
+$('.toggle-button').click(function(){
+  $('.toggle-paragraph').fadeToggle(1000);
+});
+
+
+</script>   
+</body>
 </html>

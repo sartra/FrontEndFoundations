@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Forms</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+
+  <script type="text/javascript" src="scripts/jquery-2.2.3.min.js"></script> <!-- local file  -->
+
+  <script src="scripts/jquery-ui/jquery-ui.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="css/jquery.css">
+
+    
+<link href="scripts/jquery-ui/jquery-ui.css" rel="stylesheet">
+
+
+
+  <style type="text/css">
+
+    body {
+        font-family: Helvetica, "sans-serif";
+        background-color: #C5FFFE;
+        font-size: 130%;
+    }
+
+    input{
+        height: 40px;
+        width: 320px;
+        padding: 5px 5px 10px 5px;
+        font-size: 25px;
+        border-radius: 5px;
+        border: 1px solid grey;
+    }
+
+    label {
+        position: relative;
+        top: 15px;
+        width: 200px;
+        float: left;  
+        /*display:block; would make lable above input box*/
+    }
+
+    #container{
+        width: 550px;
+        margin: 0 auto;
+    }
+
+    .form-element{
+        margin-bottom:10px;
+    }
+
+    #submitButton {
+        width: 130px;
+        margin-left: 200px;
+    }
+
+    #errorMessage{
+        font-size:12px;
+        padding:20px;
+        margin: 10px 100px;
+        border-radius: 20px;
+        border: 3px solid orangered;
+        display:none;
+    }
+
+    #successMessage{
+        font-size:300%;
+        padding:20px;
+        margin: 10px 100px;
+        border-radius: 20px;
+        border: 3px solid #75FF5C;
+        background-color: #BEFFAD;
+        color:#fff;
+        font-weight: bold;
+        text-align: center;
+        display:none;
+    }
+
+</style>
+
+</head>
+
+<body>
+
+    <div id="container">
+
+        <div id="errorMessage"></div>
+
+        <div id="successMessage">Success!</div>
+
+        <div class="form-element">
+
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" placeholder="Email@example.com">
+
+        </div>
+
+        <div class="form-element">
+
+            <label for="phone">Phone</label>
+            <input type="text" name="phone" id="phone" placeholder="309-837-4895">
+
+        </div>
+
+        <div class="form-element">
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+
+        </div>
+
+        <div class="form-element">
+
+            <label for="passwordConfirm">Confirm Password</label>
+            <input type="password" name="passwordConfirm" id="passwordConfirm">
+
+        </div>
+
+        <div class="form-element">
+
+            <input type="submit" id="submitButton" value="Sign Up">
+
+        </div>
+
+    </div>
+
+
+
+    <script type="text/javascript">
+
+            function isEmail(email) {
+                  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                  return regex.test(email);
+              }
+
+
+              $('#submitButton').click(function(){
+
+                    var errorMessage = "";
+                    var fieldsMissing ="";
+
+                    if($("#email").val() == ""){
+                        fieldsMissing += "<br>Email";
+                    };
+
+                    if($("#phone").val() == ""){
+                        fieldsMissing += "<br>Phone";
+                    };
+
+                    if($("#password").val() == ""){
+                        fieldsMissing += "<br>Password";
+                    };
+
+                    if($("#passwordConfirm").val() == ""){
+                        fieldsMissing += "<br>Confirm Password";
+                    };
+
+                    if(fieldsMissing != ""){
+                        errorMessage += "<p>The following field(s) are missing:</p>" + fieldsMissing;
+                    };
+
+
+                   if(isEmail($('#email').val()) == false){
+                        errorMessage += "<p>Your email address is not valid</p>" ;
+                   };
+
+                    if($.isNumeric($("#phone").val())==false){
+                        errorMessage += "<p>Your phone number is not valid</p>";
+                    };
+
+                    if($("#password").val() != $("#passwordConfirm").val()){
+                        errorMessage += "<p>Your password is not confirmed</p>";
+                    };
+
+                // alert(errorMessage);
+
+                    if (errorMessage != ""){
+                        $("#errorMessage").html(errorMessage);
+                        $("#errorMessage").css("color", "orangered");
+                        $("#errorMessage").css("background-color", "#FFDE65");
+                        $("#errorMessage").show();
+                    } else {
+                        $("#successMessage").show();
+                        $("#errorMessage").hide();
+                    }
+
+
+                 });
+
+
+</script>
+
+
+</body>
+</html>

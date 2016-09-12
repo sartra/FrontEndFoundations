@@ -1,0 +1,68 @@
+body {
+  background-color: aqua;
+}
+
+.container {
+  background-color: green;
+  width: 500px;
+  height: 900px;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+  padding: 20px;
+  color: white;
+}
+
+button {
+  background-color: purple;
+  height: 30px;
+  border-radius: 20px;
+  color: white;
+}
+
+button:hover {
+  background-color: red;
+}
+
+div {
+  background-color: yellow;
+}
+
+.header {
+  background-color: grey;
+  margin: 0 auto;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+}
+
+.main {
+  background-color: white;
+  height: 500px;
+  width: 350px;
+  float:left;
+}
+
+img {
+  height: 200px;
+  width: 300px;
+}
+
+.sidebar {
+  float: left;
+  height: 500px;
+  width: 150px;
+  
+}
+
+.footer {
+  position: absolute;
+  bottom: 0px;
+  width: 500px;;
+  height: 100px;
+  background-color: blue;
+}
+
+

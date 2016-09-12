@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Draggable jQuery UI - 2 boxes</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script> -->
+
+  <script type="text/javascript" src="scripts/jquery-2.2.3.min.js"></script> <!-- local file  -->
+
+  <script src="scripts/jquery-ui/jquery-ui.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="css/jquery.css">
+
+    
+<link href="scripts/jquery-ui/jquery-ui.css" rel="stylesheet">
+
+<link href="scripts/jquery-ui/jquery-ui.theme.css" rel="stylesheet">
+
+
+
+<meta charset="utf-8">
+  <title>jQuery UI Droppable - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+
+
+
+
+
+  <style type="text/css">
+
+ #draggable { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+  #droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; color:orangered; text-align: center; }
+
+  .ui-widget-header {
+  border: 1px solid #aaaaaa;
+  background: #cccccc;
+  color: #222222;
+  font-weight: bold;
+}
+  
+  </style>
+
+
+</head>
+
+<body>
+
+    
+
+<div id="draggable" class="ui-widget-content">
+  <p>Drag me to my target</p>
+</div>
+ 
+<div id="droppable" class="ui-widget-header">
+  <p>Drop here</p>
+</div>
+
+
+
+
+<script type="text/javascript">
+
+  $(function() {
+    $( "#draggable" ).draggable();
+    $( "#droppable" ).droppable({
+      drop: function( event, ui ) {
+        $( this )
+          .addClass( "ui-state-highlight" )
+          .removeClass("ui-widget-header")
+          .find( "p" )
+            .html( "Dropped!" );
+      }
+    });
+  });
+
+
+
+     
+</script>
+
+
+</body>
+</html>

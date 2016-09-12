@@ -21,12 +21,26 @@
             }
 
 
+            .fadeIn-paragraph{
+              display: none;
+            }
+
         </style>
   <title></title>
 </head>
 <body>
   
 <div id="circle"></div>
+
+<p class="fadeout-paragraph">Fade Out This Text When Button Pushed</p>
+<button class="fade-button">Fade Out Text</button>
+<br>
+<p class="fadeIn-paragraph">Fade In This Text When Button Pushed</p>
+<button class="fadeIn-button">Fade In Text</button>
+
+<p class="toggle-paragraph">Toggle This Text When Button Pushed</p>
+<button class="toggle-button">Toggle Text</button>
+
 
 
 <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
@@ -47,6 +61,18 @@ $('#circle').click(function(){
 
 });
 
+
+$('.fade-button').click(function(){
+  $('.fadeout-paragraph').fadeTo(2000, 0.1);
+});
+
+$('.fadeIn-button').click(function(){
+  $('.fadeIn-paragraph').fadeIn(1000);
+});
+
+$('.toggle-button').click(function(){
+  $('.toggle-paragraph').fadeToggle(1000);
+});
 
 
 </script>   
